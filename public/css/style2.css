@@ -1,0 +1,25 @@
+.bg-pattern {
+    background-color: #f5f5f5d6;
+    background-image: url(https://img.freepik.com/vector-premium/fondo-minimalista-abstracto-conjunto-cilindros-colores-claros-pedestales-vacios-mostrar-coleccion-productos-o-premio_391155-164.jpg?w=2000);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+#carouselExampleControls {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .carousel-caption {
+    text-align: center;
+    background-color: rgba(86, 75, 75, 0.408);
+    padding: 20px;
+  }
+  .carousel-caption h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .carousel-caption p {
+    font-size: 1rem;
+    margin-bottom: 0;
+  }

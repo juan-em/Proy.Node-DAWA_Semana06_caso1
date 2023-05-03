@@ -1,0 +1,36 @@
+doctype html
+html
+  head
+    title Mi plantilla Pug con carrusel Bootstrap
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css")
+    link(rel='stylesheet', href='./css/style.css')
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js")
+  body.bg-pattern
+    .container-fluid.pt-5.pb-5
+      div.container
+        h1.text-center.my-4 Bienvenido a mi plantilla Pug con carrusel Bootstrap
+        p.text-center #{mensaje}
+        
+        .carousel#carouselExampleControls
+          .carousel-inner
+            each e in elements
+              if e === elements[0]
+                .carousel-item.active
+                  img.d-block.w-100(src=e.imagen)
+                  .carousel-caption
+                    h3 #{e.titulo}
+                    p #{e.descripcion}
+              else
+                .carousel-item
+                  img.d-block.w-100(src=e.imagen)
+                  .carousel-caption
+                    h3 #{e.titulo}
+                    p #{e.descripcion}
+                
+          a.carousel-control-prev(href="#carouselExampleControls", role="button", data-slide="prev")
+            span.carousel-control-prev-icon(aria-hidden="true")
+            span.sr-only Previous
+          a.carousel-control-next(href="#carouselExampleControls", role="button", data-slide="next")
+            span.carousel-control-next-icon(aria-hidden="true")
+            span.sr-only Next
