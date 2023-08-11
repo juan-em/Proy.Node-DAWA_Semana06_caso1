@@ -56,7 +56,6 @@ app.get('/perfil/:id', (req, res) => {
   // Ruta para renderizar la plantilla Pug
 app.get('/miplantilla-pug', (req, res) => {
     const imagen = "./images/logo.png"
-    
     res.render('miplantilla', { mensaje: '¡Hola desde la plantilla Pug!' , elements});
   });
   
